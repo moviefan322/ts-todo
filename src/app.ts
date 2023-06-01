@@ -189,9 +189,10 @@ class ProjectItem
 
   @autobind
   dragStartHandler(event: DragEvent) {
-    console.log("DragStart");
+    console.log(event);
   }
 
+  @autobind
   dragEndHandler(_: DragEvent) {
     console.log("DragEnd");
   }
@@ -225,15 +226,11 @@ class ProjectList
   }
 
   @autobind
-  dragOverHandler(event: DragEvent) {
-    if (event.dataTransfer && event.dataTransfer.types[0] === "text/plain") {
-      event.preventDefault();
-      const listEl = this.element.querySelector("ul")!;
-      listEl.classList.add("droppable");
-    }
+  dragOverHandler(_: DragEvent) {
+    const listEl = this.element.querySelector("ul")!;
+    listEl.classList.add("droppable");
   }
 
-  @autobind
   dropHandler(_: DragEvent) {}
 
   @autobind
