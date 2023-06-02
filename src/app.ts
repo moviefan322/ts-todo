@@ -1,14 +1,8 @@
+import { ProjectInput } from "./components/project-input.js";
+import { ProjectList } from "./components/project-list.js";
 
-/// <reference path="components/project-input.ts" />
-/// <reference path="components/project-list.ts" />
+// Create new instances of the classes
 
-namespace App {
-
-  
-  // ProjectInput Class
-  
-
-  new ProjectInput();
-  new ProjectList("active");
-  new ProjectList("finished");
-}
+new ProjectInput();
+new ProjectList("active");
+new ProjectList("finished");
